@@ -25,6 +25,17 @@ RUN conda tos accept --override-channels --channel https://repo.anaconda.com/pkg
 RUN conda install -y python=3.13 pip \
     && conda clean -afy
 
+RUN conda install -y \
+    python=3.13 \
+    pip \
+    jupyterlab \
+    pandas \
+    numpy \
+    matplotlib \
+    scipy \
+    scikit-learn \
+    && conda clean -afy
+
 WORKDIR /workspace
 
 CMD ["/bin/bash"]
