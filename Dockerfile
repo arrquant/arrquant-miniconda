@@ -36,7 +36,7 @@ RUN conda install -y \
     scikit-learn \
     && conda clean -afy
 
-RUN pip install --no-cache-dir contexttimer
+RUN pip install --no-cache-dir contexttimer pyarrow ray
 
 WORKDIR /workspace
 
