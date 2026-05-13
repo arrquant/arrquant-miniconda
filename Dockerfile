@@ -36,6 +36,8 @@ RUN conda install -y \
     scikit-learn \
     && conda clean -afy
 
+RUN pip install --no-cache-dir contexttimer
+
 WORKDIR /workspace
 
 CMD ["/bin/bash"]
